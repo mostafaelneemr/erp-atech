@@ -1,15 +1,17 @@
 @extends('layouts.auth')
+
 @php
     $logo=asset(Storage::url('uploads/logo/'));
     $company_logo=Utility::getValByName('company_logo');
     $settings = Utility::settings();
-
 @endphp
+
 @push('custom-scripts')
-@if ($settings['recaptcha_module'] == 'on')
+    @if ($settings['recaptcha_module'] == 'on')
         {!! NoCaptcha::renderJs() !!}
     @endif
 @endpush
+
 @section('page-title')
     {{__('Login')}}
 @endsection

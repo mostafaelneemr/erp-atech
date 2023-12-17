@@ -13,7 +13,8 @@
     $meta_image = \App\Models\Utility::get_file('uploads/meta/');
     $meta_logo = isset($getseo['meta_image'])?$getseo['meta_image']:'';
 ?>
-    <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en" dir="<?php echo e($SITE_RTL == 'on'?'rtl':''); ?>">
 <meta name="csrf-token" id="csrf-token" content="<?php echo e(csrf_token()); ?>">
 <head>
@@ -39,7 +40,7 @@
 
     <script src="<?php echo e(asset('js/html5shiv.js')); ?>"></script>
 
-
+    
 
     <!-- Meta -->
     <meta charset="utf-8"/>
@@ -49,7 +50,7 @@
     <link rel="icon" href="<?php echo e($logo.'/'.(isset($company_favicon) && !empty($company_favicon)?$company_favicon:'favicon.png')); ?>" type="image" sizes="16x16">
 
     <!-- Favicon icon -->
-
+    
     <!-- Calendar-->
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/plugins/main.css')); ?>">
 
@@ -103,12 +104,7 @@
 <?php echo $__env->make('partials.admin.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 <!-- Modal -->
-<div class="modal notification-modal fade"
-     id="notification-modal"
-     tabindex="-1"
-     role="dialog"
-     aria-hidden="true"
->
+<div class="modal notification-modal fade" id="notification-modal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">

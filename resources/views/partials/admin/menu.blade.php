@@ -893,21 +893,23 @@
 
                         <!--------------------- End POs System ----------------------------------->
 
-                        <li class="dash-item dash-hasmenu {{ (Request::segment(1) == 'support')?'active':''}}">
+                        {{-- <li class="dash-item dash-hasmenu {{ (Request::segment(1) == 'support')?'active':''}}">
                             <a href="{{route('support.index')}}" class="dash-link">
                                 <span class="dash-micon"><i class="ti ti-headphones"></i></span><span class="dash-mtext">{{__('Support System')}}</span>
                             </a>
-                        </li>
-                        <li class="dash-item dash-hasmenu {{ (Request::segment(1) == 'zoom-meeting' || Request::segment(1) == 'zoom-meeting-calender')?'active':''}}">
+                        </li> --}}
+
+                        {{-- <li class="dash-item dash-hasmenu {{ (Request::segment(1) == 'zoom-meeting' || Request::segment(1) == 'zoom-meeting-calender')?'active':''}}">
                             <a href="{{route('zoom-meeting.index')}}" class="dash-link">
                                     <span class="dash-micon"><i class="ti ti-user-check"></i></span><span class="dash-mtext">{{__('Zoom Meeting')}}</span>
                             </a>
-                        </li>
-                        <li class="dash-item dash-hasmenu {{ (Request::segment(1) == 'chats')?'active':''}}">
+                        </li> --}}
+
+                        {{-- <li class="dash-item dash-hasmenu {{ (Request::segment(1) == 'chats')?'active':''}}">
                             <a href="{{ url('chats') }}" class="dash-link">
                                 <span class="dash-micon"><i class="ti ti-message-circle"></i></span><span class="dash-mtext">{{__('Messenger')}}</span>
                             </a>
-                        </li>
+                        </li> --}}
 
                         @if(\Auth::user()->type =='company')
                             <li class="dash-item dash-hasmenu {{ (Request::segment(1) == 'notification-templates')?'active':''}}">
@@ -922,7 +924,7 @@
                                     <span class="dash-mtext">{{ __('Email Template') }}</span></a>
                             </li>
 
-                            @include('landingpage::menu.landingpage')
+                            {{-- @include('landingpage::menu.landingpage') --}}
 
 
                         @endif
@@ -1034,7 +1036,7 @@
                 </ul>
             @endif
 
-                <div class="navbar-footer border-top ">
+                {{-- <div class="navbar-footer border-top ">
                     <div class="d-flex align-items-center py-3 px-3 border-bottom">
                         <div class="me-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
@@ -1046,12 +1048,13 @@
                                 <path d="M22.08 21.7046C21.75 22.0846 21.4 22.4446 21.02 22.7646L17.12 18.8546C17.1 18.8346 17.09 18.8246 17.08 18.8046C17.49 18.5146 17.84 18.1646 18.13 17.7546C18.15 17.7646 18.16 17.7746 18.18 17.7946L22.08 21.7046Z" fill="#162C4E"></path>
                             </svg>
                         </div>
+                        
                         <div>
                             <b class="d-block f-w-700">{{__('You need help?')}}</b>
                             <span>{{__('Check out our repository')}} </span>
                         </div>
                     </div>
-                </div>
+                </div> --}}
         </div>
     </div>
 </nav>

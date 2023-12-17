@@ -2,14 +2,15 @@
     $logo=asset(Storage::url('uploads/logo/'));
     $company_logo=Utility::getValByName('company_logo');
     $settings = Utility::settings();
-
 ?>
+
 <?php $__env->startPush('custom-scripts'); ?>
-<?php if($settings['recaptcha_module'] == 'on'): ?>
+    <?php if($settings['recaptcha_module'] == 'on'): ?>
         <?php echo NoCaptcha::renderJs(); ?>
 
     <?php endif; ?>
 <?php $__env->stopPush(); ?>
+
 <?php $__env->startSection('page-title'); ?>
     <?php echo e(__('Login')); ?>
 

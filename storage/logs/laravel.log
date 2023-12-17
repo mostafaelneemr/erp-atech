@@ -3190,3 +3190,12 @@
 #4 F:\\xampp\\htdocs\\erpgo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
 #5 {main}
 "} 
+[2023-12-17 07:01:37] local.ERROR: There are no commands defined in the "link" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"link\" namespace. at F:\\xampp\\htdocs\\erpgo\\vendor\\symfony\\console\\Application.php:657)
+[stacktrace]
+#0 F:\\xampp\\htdocs\\erpgo\\vendor\\symfony\\console\\Application.php(708): Symfony\\Component\\Console\\Application->findNamespace()
+#1 F:\\xampp\\htdocs\\erpgo\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->find()
+#2 F:\\xampp\\htdocs\\erpgo\\vendor\\symfony\\console\\Application.php(174): Symfony\\Component\\Console\\Application->doRun()
+#3 F:\\xampp\\htdocs\\erpgo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run()
+#4 F:\\xampp\\htdocs\\erpgo\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 {main}
+"} 

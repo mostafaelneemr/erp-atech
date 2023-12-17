@@ -13,7 +13,8 @@
     $meta_image = \App\Models\Utility::get_file('uploads/meta/');
     $meta_logo = isset($getseo['meta_image'])?$getseo['meta_image']:'';
 @endphp
-    <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en" dir="{{$SITE_RTL == 'on'?'rtl':''}}">
 <meta name="csrf-token" id="csrf-token" content="{{ csrf_token() }}">
 <head>
@@ -39,7 +40,7 @@
 
     <script src="{{ asset('js/html5shiv.js') }}"></script>
 
-{{--    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>--}}
+    {{--    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>--}}
 
     <!-- Meta -->
     <meta charset="utf-8"/>
@@ -49,7 +50,7 @@
     <link rel="icon" href="{{$logo.'/'.(isset($company_favicon) && !empty($company_favicon)?$company_favicon:'favicon.png')}}" type="image" sizes="16x16">
 
     <!-- Favicon icon -->
-{{--    <link rel="icon" href="{{ asset('assets/images/favicon.svg') }}" type="image/x-icon"/>--}}
+    {{--    <link rel="icon" href="{{ asset('assets/images/favicon.svg') }}" type="image/x-icon"/>--}}
     <!-- Calendar-->
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/main.css') }}">
 
@@ -103,12 +104,7 @@
 @include('partials.admin.header')
 
 <!-- Modal -->
-<div class="modal notification-modal fade"
-     id="notification-modal"
-     tabindex="-1"
-     role="dialog"
-     aria-hidden="true"
->
+<div class="modal notification-modal fade" id="notification-modal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">

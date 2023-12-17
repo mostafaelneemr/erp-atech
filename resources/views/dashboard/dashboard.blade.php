@@ -1,7 +1,9 @@
 @extends('layouts.admin')
+
 @section('page-title')
     {{__('Dashboard')}}
 @endsection
+
 @push('script-page')
     <script>
         $(document).ready(function()
@@ -91,13 +93,16 @@
         }
     </script>
 @endpush
+
 @section('breadcrumb')
     <li class="breadcrumb-item"><a href="{{route('dashboard')}}">{{__('Dashboard')}}</a></li>
     <li class="breadcrumb-item">{{__('HRM')}}</li>
 @endsection
+
 @php
     $setting = \App\Models\Utility::settings();
 @endphp
+
 @section('content')
     @if(\Auth::user()->type != 'client' && \Auth::user()->type != 'company')
         <div class="row">
