@@ -581,7 +581,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xxl-12">
+
+                        {{-- <div class="col-xxl-12">
                             <div class="card">
                                 <div class="card-body">
 
@@ -670,8 +671,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xxl-12">
+                        </div> --}}
+
+                        {{-- <div class="col-xxl-12">
                             <div class="card">
                                 <div class="card-body">
 
@@ -679,6 +681,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#bills_weekly_statistics" role="tab" aria-controls="pills-home" aria-selected="true">{{__('Bills Weekly Statistics')}}</a>
                                         </li>
+                                        
                                         <li class="nav-item">
                                             <a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" href="#bills_monthly_statistics" role="tab" aria-controls="pills-profile" aria-selected="false">{{__('Bills Monthly Statistics')}}</a>
                                         </li>
@@ -760,10 +763,12 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
+
                     </div>
                 </div>
-                <div class="col-xxl-12">
+
+                {{-- <div class="col-xxl-12">
                     <div class="card">
                         <div class="card-header">
 
@@ -827,11 +832,7 @@
                             @endforelse
                         </div>
                     </div>
-                </div>
-
-
-
-
+                </div> --}}
 
             </div>
         </div>

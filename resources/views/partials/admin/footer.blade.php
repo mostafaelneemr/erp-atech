@@ -4,7 +4,7 @@
 
 @endphp
 <!-- [ Main Content ] end -->
-<footer class="dash-footer">
+<footer class="dash-footer" style="background: #fff">
     <div class="footer-wrapper">
         <div class="py-1">
             <p class="mb-0 text-muted"> &copy;
@@ -56,6 +56,7 @@
 @if($get_cookie['enable_cookie'] == 'on')
     @include('layouts.cookie_consent')
 @endif
+
 @stack('script-page')
 
 

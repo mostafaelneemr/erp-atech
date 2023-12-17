@@ -18,7 +18,7 @@
 <?php endif; ?>
     <div class="navbar-wrapper">
         <div class="m-header main-logo">
-            <a href="#" class="b-brand">
+            <a href="<?php echo e(route('dashboard')); ?>" class="b-brand">
                 <?php if($setting['cust_darklayout'] && $setting['cust_darklayout'] == 'on' ): ?>
 
                     <img src="<?php echo e($logo . '/' . (isset($company_logos) && !empty($company_logos) ? $company_logos : 'logo-dark.png')); ?>"

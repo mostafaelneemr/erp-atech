@@ -4,7 +4,7 @@
 
 ?>
 <!-- [ Main Content ] end -->
-<footer class="dash-footer">
+<footer class="dash-footer" style="background: #fff">
     <div class="footer-wrapper">
         <div class="py-1">
             <p class="mb-0 text-muted"> &copy;
@@ -57,6 +57,7 @@
 <?php if($get_cookie['enable_cookie'] == 'on'): ?>
     <?php echo $__env->make('layouts.cookie_consent', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <?php endif; ?>
+
 <?php echo $__env->yieldPushContent('script-page'); ?>
 
 
