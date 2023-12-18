@@ -20,12 +20,10 @@
         <div class="m-header main-logo">
             <a href="{{route('dashboard')}}" class="b-brand">
                 @if($setting['cust_darklayout'] && $setting['cust_darklayout'] == 'on' )
-
-                    <img src="{{ $logo . '/' . (isset($company_logos) && !empty($company_logos) ? $company_logos : 'logo-dark.png') }}"
+                    <img src="{{ $logo . (isset($company_logos) && !empty($company_logos) ? $company_logos : 'logo-dark.png') }}"
                          alt="{{ config('app.name', 'ERPGo') }}" class="logo logo-lg">
                 @else
-
-                    <img src="{{ $logo . '/' . (isset($company_logo) && !empty($company_logo) ? $company_logo : 'logo-dark.png') }}"
+                    <img src="{{ $logo . (isset($company_logo) && !empty($company_logo) ? $company_logo : 'logo-dark.png') }}"
                          alt="{{ config('app.name', 'ERPGo') }}" class="logo logo-lg">
                 @endif
             </a>
@@ -43,7 +41,7 @@
                                  Request::segment(1) == 'reports-monthly-attendance'|| Request::segment(1) == 'reports-lead' || Request::segment(1) == 'reports-deal'
                                  || Request::segment(1) == 'pos-dashboard'|| Request::segment(1) == 'reports-warehouse' || Request::segment(1) == 'reports-daily-purchase'
                                 || Request::segment(1) == 'reports-monthly-purchase' || Request::segment(1) == 'reports-daily-pos' ||Request::segment(1) == 'reports-monthly-pos' ||Request::segment(1) == 'reports-pos-vs-purchase') ?'active dash-trigger':''}}">
-                            <a href="#!" class="dash-link"><span class="dash-micon"><i class="ti ti-home"></i></span><span class="dash-mtext">{{__('Dashboard')}}</span>
+                            <a href="#" class="dash-link"><span class="dash-micon"><i class="ti ti-home"></i></span><span class="dash-mtext">{{__('Dashboard')}}</span>
                                 <span class="dash-arrow"><i data-feather="chevron-right"></i></span></a>
                             <ul class="dash-submenu">
                                 @if($show_dashboard == 1 && Gate::check('show account dashboard'))

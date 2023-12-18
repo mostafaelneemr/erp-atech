@@ -1,7 +1,9 @@
 @extends('layouts.admin')
+
 @section('page-title')
     {{__('Dashboard')}}
 @endsection
+
 @push('script-page')
     <script>
         @if(\Auth::user()->can('show account dashboard'))
@@ -79,6 +81,7 @@
             var arChart = new ApexCharts(document.querySelector("#cash-flow"), chartBarOptions);
             arChart.render();
         })();
+
         (function () {
             var options = {
                 chart: {
@@ -187,10 +190,12 @@
         @endif
     </script>
 @endpush
+
 @section('breadcrumb')
     <li class="breadcrumb-item"><a href="{{route('dashboard')}}">{{__('Dashboard')}}</a></li>
     <li class="breadcrumb-item">{{__('Account')}}</li>
 @endsection
+
 @section('content')
     <div class="row">
         <div class="col-sm-12">

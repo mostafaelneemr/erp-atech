@@ -2,6 +2,7 @@
     <?php echo e(__('Dashboard')); ?>
 
 <?php $__env->stopSection(); ?>
+
 <?php $__env->startPush('script-page'); ?>
     <script>
         <?php if(\Auth::user()->can('show account dashboard')): ?>
@@ -81,6 +82,7 @@
             var arChart = new ApexCharts(document.querySelector("#cash-flow"), chartBarOptions);
             arChart.render();
         })();
+
         (function () {
             var options = {
                 chart: {
@@ -191,10 +193,12 @@
         <?php endif; ?>
     </script>
 <?php $__env->stopPush(); ?>
+
 <?php $__env->startSection('breadcrumb'); ?>
     <li class="breadcrumb-item"><a href="<?php echo e(route('dashboard')); ?>"><?php echo e(__('Dashboard')); ?></a></li>
     <li class="breadcrumb-item"><?php echo e(__('Account')); ?></li>
 <?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('content'); ?>
     <div class="row">
         <div class="col-sm-12">
